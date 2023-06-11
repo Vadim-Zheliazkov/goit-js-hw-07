@@ -12,7 +12,7 @@ console.log(galleryItems);
 const listPhoto = document.querySelector(".gallery");
 
 const listGalleryItems = iterateArrayGalleryItems(galleryItems);
-console.log(listGalleryItems);
+
 function iterateArrayGalleryItems(list) {
   return list
     .map(
@@ -33,15 +33,12 @@ listPhoto.addEventListener("click", handleFunctionForPhotoList);
 
 function handleFunctionForPhotoList(evt) {
   evt.preventDefault();
-  accessToLinkFromA.toggleAttribute("href");
-
-  console.log(evt.target);
-  console.log(evt.target.src);
 
   // ================================================ // CREATE NEW MARKUP=======================
 
   let lightbox = new SimpleLightbox(".gallery a", {
     captionsData: "alt",
     captionDelay: 250,
+    // captionPosition: "bottom",
   });
 }
