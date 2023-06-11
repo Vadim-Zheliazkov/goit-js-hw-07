@@ -58,15 +58,16 @@ function makeBigPhoto(evt) {
 
   instance.show();
 
-  listPhoto.addEventListener("keydown", closeModalBtnEsc);
-
   // CLOSE MODAL WITH HELP OF ESC=======================
   // ================================================
+
+  listPhoto.addEventListener("keydown", closeModalBtnEsc);
 
   function closeModalBtnEsc(evt) {
     if (evt.key === "Escape") {
       instance.close();
       listPhoto.removeEventListener("keydown", closeModalBtnEsc);
     }
+    return;
   }
 }
