@@ -1,21 +1,4 @@
 import { galleryItems } from "./gallery-items.js";
-// Change code below this line
-
-// console.log(galleryItems);
-
-// <li class="gallery__item">
-//   <a class="gallery__link" href="large-image.jpg">
-//     <img
-//       class="gallery__image"
-//       src="small-image.jpg"
-//       data-source="large-image.jpg"
-//       alt="Image description"
-//     />
-//   </a>
-// </li>;
-
-// CREATE LIST AND ADD TO UL=======================
-// ================================================
 
 const listPhoto = document.querySelector(".gallery");
 listPhoto.addEventListener("click", makeBigPhoto);
@@ -61,12 +44,12 @@ function makeBigPhoto(evt) {
   // CLOSE MODAL WITH HELP OF ESC=======================
   // ================================================
 
-  listPhoto.addEventListener("keydown", closeModalBtnEsc);
+  document.addEventListener("keydown", closeModalBtnEsc);
 
   function closeModalBtnEsc(evt) {
     if (evt.key === "Escape") {
       instance.close();
-      listPhoto.removeEventListener("keydown", closeModalBtnEsc);
+      document.removeEventListener("keydown", closeModalBtnEsc);
     }
     return;
   }

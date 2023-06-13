@@ -3,12 +3,6 @@ import { galleryItems } from "./gallery-items.js";
 
 console.log(galleryItems);
 
-/* <li class="gallery__item">
-  <a class="gallery__link" href="large-image.jpg">
-    <img class="gallery__image" src="small-image.jpg" alt="Image description" />
-  </a>
-</li> */
-
 const listPhoto = document.querySelector(".gallery");
 
 const listGalleryItems = iterateArrayGalleryItems(galleryItems);
@@ -27,8 +21,6 @@ function iterateArrayGalleryItems(list) {
 
 listPhoto.innerHTML = listGalleryItems;
 
-const accessToLinkFromA = document.querySelector(".gallery__link");
-
 listPhoto.addEventListener("click", handleFunctionForPhotoList);
 
 function handleFunctionForPhotoList(evt) {
@@ -39,6 +31,5 @@ function handleFunctionForPhotoList(evt) {
   let lightbox = new SimpleLightbox(".gallery a", {
     captionsData: "alt",
     captionDelay: 250,
-    // captionPosition: "bottom",
   });
 }
